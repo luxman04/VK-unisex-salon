@@ -1,42 +1,84 @@
 import "./globals.css";
 import { ServicesProvider } from "@/context/ServicesContext";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
   metadataBase: new URL("https://vk-unisex-salon.com"),
-  title: "V.K Unisex Salon | Style • Care • Confidence | Tibba Road, Ludhiana",
+  title: {
+    default: "V.K Unisex Salon | Style • Care • Confidence | Tibba Road, Ludhiana",
+    template: "%s | V.K Unisex Salon",
+  },
   description:
-    "Professional hair, beauty and grooming services for men, women and everyone in Tibba Road, Ludhiana. Trendy haircuts, hair colouring, keratin, bridal makeover and beard grooming. Call +91 98722 65230.",
+    "Professional hair, beauty and grooming services for men, women and everyone in Tibba Road, Ludhiana. Trendy haircuts, hair colouring, keratin, bridal makeover, beard grooming and rejuvenating facials. Call +91 98722 65230.",
   keywords: [
     "V.K Unisex Salon",
     "VK Salon Ludhiana",
-    "Salon Tibba Road Ludhiana",
+    "Unisex Salon Tibba Road Ludhiana",
+    "Best salon in Ludhiana",
     "Haircut Ludhiana",
-    "Hair Colouring",
-    "Keratin & Smoothing",
-    "Beard Grooming",
-    "Bridal Makeup Ludhiana",
-    "Unisex Salon Ludhiana",
+    "Hair Colouring Ludhiana",
+    "Keratin Treatment Ludhiana",
+    "Hair Spa Ludhiana",
+    "Beard Grooming Ludhiana",
+    "Facial and Skin Care Ludhiana",
+    "Bridal Makeup Tibba Road",
+    "Beauty Parlour Ludhiana",
+    "Men Grooming Salon Ludhiana",
+    "Women Haircut Ludhiana",
   ],
-  authors: [{ name: "V.K Unisex Salon" }],
+  authors: [{ name: "V.K Unisex Salon", url: "https://vk-unisex-salon.com" }],
+  creator: "V.K Unisex Salon",
+  publisher: "V.K Unisex Salon",
+  category: "Beauty & Personal Grooming",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/images/hero-model.jpg",
   },
   openGraph: {
-    title: "V.K Unisex Salon | Style • Care • Confidence",
+    title: "V.K Unisex Salon | Style • Care • Confidence | Tibba Road, Ludhiana",
     description:
-      "Professional hair, beauty and grooming services for men, women and everyone in Tibba Road, Ludhiana.",
+      "Professional hair, beauty and grooming services for men, women and everyone in Tibba Road, Ludhiana. Book appointment online or call +91 98722 65230.",
     url: "https://vk-unisex-salon.com",
     siteName: "V.K Unisex Salon",
+    locale: "en_IN",
+    type: "website",
     images: [
       {
         url: "/images/hero-model.jpg",
         width: 1200,
         height: 630,
-        alt: "V.K Unisex Salon Ludhiana",
+        alt: "V.K Unisex Salon Ludhiana - Style, Care, Confidence",
+      },
+      {
+        url: "/images/salon-interior.jpg",
+        width: 1200,
+        height: 675,
+        alt: "V.K Unisex Salon Modern Setup",
       },
     ],
-    locale: "en_IN",
-    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "V.K Unisex Salon | Style • Care • Confidence",
+    description:
+      "Professional hair, beauty and grooming services for men, women and everyone in Tibba Road, Ludhiana.",
+    images: ["/images/hero-model.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -63,6 +105,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <JsonLd />
         <ServicesProvider>{children}</ServicesProvider>
       </body>
     </html>
