@@ -1,0 +1,62 @@
+export const initialServices = [
+  {
+    id: "haircut",
+    title: "Haircut & Styling",
+    description: "Trendy haircuts and modern styling for all age groups.",
+    price: 350,
+    discountPercent: 15,
+    image: "/images/service-haircut.jpg",
+    iconName: "Scissors",
+  },
+  {
+    id: "colouring",
+    title: "Hair Colouring",
+    description: "Global colouring, highlights and fashion colours.",
+    price: 1800,
+    discountPercent: 20,
+    image: "/images/service-colouring.jpg",
+    iconName: "Paintbrush",
+  },
+  {
+    id: "spa",
+    title: "Hair Spa & Treatment",
+    description: "Deep nourishment for healthy, stronger hair.",
+    price: 999,
+    discountPercent: 15,
+    image: "/images/service-spa.jpg",
+    iconName: "Droplets",
+  },
+  {
+    id: "beard",
+    title: "Beard Grooming",
+    description: "Beard cut, shaping and complete grooming.",
+    price: 250,
+    discountPercent: 10,
+    image: "/images/service-beard.jpg",
+    iconName: "Scissors",
+  },
+  {
+    id: "facial",
+    title: "Facial & Skin Care",
+    description: "Rejuvenating facials for fresh and glowing skin.",
+    price: 1200,
+    discountPercent: 20,
+    image: "/images/service-facial.jpg",
+    iconName: "Smile",
+  },
+  {
+    id: "keratin",
+    title: "Keratin & Smoothing",
+    description: "Smoother, shinier and frizz-free hair.",
+    price: 3500,
+    discountPercent: 25,
+    image: "/images/service-keratin.jpg",
+    iconName: "Sparkles",
+  },
+];
+
+export const initialGlobalSettings = {
+  globalDiscountActive: false,
+  globalDiscountPercent: 20,
+  discountBannerText: "✨ Special Discount: Flat 20% OFF on All Services at V.K Unisex Salon! ✨",
+};

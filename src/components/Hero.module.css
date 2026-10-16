@@ -1,0 +1,344 @@
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 80px;
+  background: radial-gradient(circle at 80% 20%, rgba(216, 237, 229, 0.6) 0%, rgba(250, 248, 245, 0.4) 60%),
+              radial-gradient(circle at 10% 80%, rgba(253, 238, 233, 0.45) 0%, rgba(250, 248, 245, 0.2) 50%);
+}
+
+.heroBackdropWave {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: radial-gradient(ellipse at 70% 30%, rgba(189, 219, 209, 0.4) 0%, rgba(189, 219, 209, 0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.heroGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Left Content */
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.taglineBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #3b7064;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.taglineDot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #3b7064;
+  border-radius: 50%;
+}
+
+.mainTitle {
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #0c332d;
+  margin-bottom: 8px;
+}
+
+.secondaryTitle {
+  font-size: 2.85rem;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: #172a24;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cursiveCare {
+  font-family: var(--font-cursive);
+  font-weight: 400;
+  font-size: 4.2rem;
+  color: var(--accent-coral);
+  transform: rotate(-3deg);
+  display: inline-block;
+  margin: 0 4px;
+  text-shadow: 0 2px 8px rgba(223, 115, 88, 0.18);
+}
+
+.heroDescription {
+  font-size: 1.12rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+}
+
+.heroPrimaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--primary-teal);
+  color: #ffffff;
+  padding: 15px 32px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(15, 56, 51, 0.25);
+}
+
+.heroPrimaryBtn:hover {
+  background-color: var(--primary-teal-dark);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(15, 56, 51, 0.35);
+}
+
+.heroSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--primary-teal);
+  border: 1.5px solid var(--primary-teal);
+  padding: 14px 30px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.98rem;
+  transition: all 0.25s ease;
+}
+
+.heroSecondaryBtn:hover {
+  background-color: rgba(15, 56, 51, 0.07);
+  transform: translateY(-2px);
+}
+
+/* Feature Badges */
+.featureBadges {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.badgeItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.badgeIconBox {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(30, 97, 87, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-teal);
+  flex-shrink: 0;
+}
+
+.badgeText {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.25;
+}
+
+/* Right Visual */
+.heroVisualWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visualShapeBg {
+  position: absolute;
+  width: 106%;
+  height: 104%;
+  top: -2%;
+  left: -3%;
+  background: linear-gradient(135deg, rgba(162, 206, 193, 0.45) 0%, rgba(206, 230, 222, 0.3) 100%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  z-index: 1;
+  filter: blur(15px);
+  animation: pulseSubtle 8s infinite alternate ease-in-out;
+}
+
+.heroImageFrame {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 480px;
+  height: 570px;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(15, 56, 51, 0.18), 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  background-color: #e5eee9;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroImageFrame:hover .heroImage {
+  transform: scale(1.03);
+}
+
+/* Floating Handwritten Badge: "Good Hair Brighter You" */
+.cursiveOverlayBadge {
+  position: absolute;
+  top: 15%;
+  right: 12px;
+  z-index: 3;
+  color: #ffffff;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  text-align: right;
+  transform: rotate(6deg);
+}
+
+.cursiveText {
+  font-family: var(--font-cursive);
+  font-size: 2.9rem;
+  line-height: 0.95;
+  font-weight: 400;
+  display: block;
+}
+
+.cursiveCurveSvg {
+  width: 90px;
+  height: 18px;
+  margin-left: auto;
+  margin-top: 4px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .heroGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .mainTitle {
+    font-size: 3.1rem;
+  }
+  .secondaryTitle {
+    font-size: 2.3rem;
+  }
+  .cursiveCare {
+    font-size: 3.4rem;
+  }
+  .heroImageFrame {
+    height: 480px;
+  }
+  .cursiveText {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .heroSection {
+    padding: 40px 0 60px;
+  }
+  .heroGrid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .heroVisualWrapper {
+    order: -1;
+    max-width: 420px;
+    margin: 0 auto 30px;
+  }
+  .heroImageFrame {
+    height: 420px;
+    border-radius: 28px;
+  }
+  .mainTitle {
+    font-size: 2.6rem;
+  }
+  .secondaryTitle {
+    font-size: 2rem;
+  }
+  .cursiveCare {
+    font-size: 3rem;
+  }
+  .heroDescription {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+  .featureBadges {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+  .secondaryTitle {
+    font-size: 1.7rem;
+    gap: 8px;
+  }
+  .cursiveCare {
+    font-size: 2.5rem;
+  }
+  .heroPrimaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  .heroSecondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .featureBadges {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .heroImageFrame {
+    height: 360px;
+  }
+  .cursiveText {
+    font-size: 1.85rem;
+  }
+}

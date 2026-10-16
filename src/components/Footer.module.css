@@ -1,0 +1,152 @@
+.footer {
+  background-color: #faf8f5;
+  border-top: 1px solid rgba(15, 56, 51, 0.12);
+  padding: 48px 0 32px;
+}
+
+.footerMainRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(15, 56, 51, 0.08);
+}
+
+/* Brand Logo */
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoTopRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logoBrand {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.logoScissorsIcon {
+  width: 22px;
+  height: 22px;
+  color: var(--primary-teal);
+  transform: rotate(-15deg);
+}
+
+.logoTagline {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  color: var(--text-body);
+  line-height: 1;
+  margin-top: 3px;
+}
+
+/* Footer Nav */
+.footerNav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.footerNavLink {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-body);
+  transition: color 0.2s ease;
+}
+
+.footerNavLink:hover {
+  color: var(--primary-teal);
+}
+
+/* Social Icons */
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.socialIconBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(15, 56, 51, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  transition: all 0.25s ease;
+}
+
+.socialIconBtn:hover {
+  border-color: var(--primary-teal);
+  background-color: var(--primary-teal);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Bottom Bar */
+.footerBottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footerCredits {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adminSecretLink {
+  opacity: 0.35;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  margin-left: 6px;
+}
+
+.adminSecretLink:hover {
+  opacity: 1;
+  color: var(--primary-teal);
+  background-color: rgba(15, 56, 51, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footerMainRow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+  .footerNav {
+    justify-content: center;
+    gap: 20px;
+  }
+  .footerBottomBar {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}

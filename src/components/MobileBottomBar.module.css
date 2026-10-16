@@ -1,0 +1,53 @@
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid rgba(15, 56, 51, 0.12);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  padding: 10px 16px;
+  z-index: 99;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.actionBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.callBtn {
+  background-color: var(--accent-mint);
+  color: var(--primary-teal);
+  border: 1px solid rgba(15, 56, 51, 0.15);
+}
+
+.whatsappBtn {
+  background-color: #25d366;
+  color: #ffffff;
+}
+
+.bookBtn {
+  background-color: var(--primary-teal);
+  color: #ffffff;
+  flex: 1.2;
+}
+
+@media (max-width: 768px) {
+  .bottomBar {
+    display: flex;
+  }
+}

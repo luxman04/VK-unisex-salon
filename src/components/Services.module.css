@@ -1,0 +1,227 @@
+.servicesSection {
+  padding: 90px 0 100px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.servicesHeaderRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+.headerTextGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleServicesHighlight {
+  color: var(--accent-teal);
+}
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--text-dark);
+  border: 1.5px solid rgba(15, 56, 51, 0.25);
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.viewAllBtn:hover {
+  border-color: var(--primary-teal);
+  background-color: var(--accent-mint);
+  color: var(--primary-teal);
+  transform: translateY(-2px);
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+.serviceCard {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 56, 51, 0.08);
+  box-shadow: 0 4px 18px rgba(15, 56, 51, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.serviceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(15, 56, 51, 0.12);
+  border-color: rgba(15, 56, 51, 0.2);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #e5eee9;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.serviceCard:hover .cardImage {
+  transform: scale(1.06);
+}
+
+/* Circular Icon Badge overlapping image bottom */
+.iconBadge {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #e2f1ec;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 56, 51, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-teal);
+  z-index: 2;
+  transition: all 0.25s ease;
+}
+
+.serviceCard:hover .iconBadge {
+  background-color: var(--primary-teal);
+  color: #ffffff;
+  transform: translateX(-50%) scale(1.08);
+}
+
+/* Card Body */
+.cardBody {
+  padding: 34px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.cardDesc {
+  font-size: 0.85rem;
+  color: var(--text-body);
+  line-height: 1.5;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+/* Pricing and Discount Row */
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.finalPrice {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-teal);
+}
+
+.originalPrice {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.discountBadge {
+  background-color: #feebe7;
+  color: var(--accent-coral);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.3px;
+  display: inline-block;
+}
+
+.cardBookAction {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent-teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s ease;
+}
+
+.serviceCard:hover .cardBookAction {
+  gap: 7px;
+  color: var(--primary-teal);
+}
+
+/* Responsive Grid */
+@media (max-width: 1200px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesSection {
+    padding: 60px 0 70px;
+  }
+  .servicesHeaderRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .cardImageWrapper {
+    height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cardImageWrapper {
+    height: 200px;
+  }
+}
