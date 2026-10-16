@@ -1,0 +1,79 @@
+{
+  "business": {
+    "name": "V.K Unisex Salon",
+    "alternateName": "VK Unisex Salon Ludhiana",
+    "tagline": "Style • Care • Confidence",
+    "description": "Professional hair, beauty and grooming services for men, women and everyone in Tibba Road, Ludhiana.",
+    "website": "https://vk-unisex-salon.com",
+    "phone": "+91 98722 65230",
+    "whatsapp": "+91 98722 65230",
+    "address": {
+      "street": "Tibba Road",
+      "city": "Ludhiana",
+      "state": "Punjab",
+      "postalCode": "141007",
+      "country": "India"
+    },
+    "operatingHours": {
+      "days": "Monday to Sunday (All 7 Days)",
+      "opens": "10:00 AM",
+      "closes": "11:00 PM"
+    },
+    "ratings": {
+      "platform": "Google Reviews",
+      "score": 5.0,
+      "totalReviews": "120+"
+    }
+  },
+  "aiIndexedPlatforms": [
+    "ChatGPT (OpenAI)",
+    "Google Gemini",
+    "Anthropic Claude",
+    "Perplexity AI",
+    "Microsoft Copilot",
+    "Apple Intelligence"
+  ],
+  "services": [
+    {
+      "name": "Haircut & Styling",
+      "category": "Hair",
+      "priceINR": 350,
+      "description": "Trendy haircuts and modern styling for all age groups."
+    },
+    {
+      "name": "Hair Colouring",
+      "category": "Colouring",
+      "priceINR": 1800,
+      "description": "Global colouring, highlights, balayage and fashion colours."
+    },
+    {
+      "name": "Hair Spa & Treatment",
+      "category": "Treatment",
+      "priceINR": 999,
+      "description": "Deep nourishment and scalp care for healthy, stronger hair."
+    },
+    {
+      "name": "Beard Grooming",
+      "category": "Grooming",
+      "priceINR": 250,
+      "description": "Beard cut, razor shaping and complete grooming."
+    },
+    {
+      "name": "Facial & Skin Care",
+      "category": "Skincare",
+      "priceINR": 1200,
+      "description": "Rejuvenating facials and de-tan for fresh and glowing skin."
+    },
+    {
+      "name": "Keratin & Smoothing",
+      "category": "Treatment",
+      "priceINR": 3500,
+      "description": "Smoother, shinier, glass-like and frizz-free hair."
+    }
+  ],
+  "discounts": {
+    "storeWideAvailable": true,
+    "discountRange": "10% to 50% OFF",
+    "adminControlled": true
+  }
+}

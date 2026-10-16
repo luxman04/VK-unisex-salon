@@ -103,6 +103,10 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
+        {/* AI Platforms Index (ChatGPT, Gemini, Claude, Perplexity) */}
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="AI Knowledge Index (llms.txt)" />
+        <link rel="alternate" type="application/json" href="/ai-index.json" title="AI Structured Knowledge (ai-index.json)" />
+        <meta name="ai-content-declaration" content="business, grooming, hair salon, unisex parlour, ludhiana" />
       </head>
       <body>
         <JsonLd />
